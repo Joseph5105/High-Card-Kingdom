@@ -37,7 +37,7 @@ public class TileManager {
             
             tile[2] = new Tile();
             tile[2].image = ImageIO.read(getClass().getResourceAsStream("/src/Tiles/water.png"));
-            tile[1].collision = true;
+            tile[2].collision = true;
 
             tile[3] = new Tile();
             tile[3].image = ImageIO.read(getClass().getResourceAsStream("/src/Tiles/earth.png"));
@@ -103,6 +103,7 @@ public class TileManager {
             int screenY = worldY - gp.player.worldY + gp.player.screenY;
 
             g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
+            
             worldCol++;
 
             if(worldCol == gp.maxWorldCol){
